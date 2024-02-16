@@ -1,5 +1,5 @@
 # Fixed-Growable-Stack-and-Implementation-Practice
-# Java Stack Implementations
+## Java Stack Implementations
 
 This repository implements two Java data structures representing stacks:
 
@@ -61,6 +61,57 @@ InterfaceDemo prompts for the fixed stack size and showcases:
 1. **Fork the repository**: Create a copy of the repository on your GitHub account.
 2. **Make improvements**: Add features, fix bugs, or enhance the code.
 3. **Submit pull requests**: Share your changes with the project maintainers, ensuring clarity and adherence to the coding style.
+
+
+## Mulitple Interface
+
+# Code Explanation
+
+## ExamInterface
+
+The `ExamInterface` is an interface that outlines the methods required to display exam details and calculate the percentage for a student.
+
+### Methods
+
+- `void displayExamDetails()`: This method is responsible for displaying the exam details, such as the PRN (Permanent Registration Number), name, and marks for each subject.
+- `double Percent_cal(double mark1, double mark2, double mark3)`: This method calculates the percentage based on the marks obtained in three subjects.
+
+## Result
+
+The `Result` class implements the `ExamInterface` interface and represents the result of a student.
+
+### Constructor
+
+- `public Result(String name, int prn, double mark1, double mark2, double mark3)`: This constructor initializes the `Result` object with the provided name, PRN, and marks for three subjects.
+
+### Methods
+
+- `double Percent_cal(double mark1, double mark2, double mark3)`: This method overrides the `Percent_cal` method defined in the `ExamInterface` interface to calculate the percentage.
+- `void displayExamDetails()`: This method overrides the `displayExamDetails` method defined in the `ExamInterface` interface to display the exam details including PRN, name, marks for each subject, and the calculated percentage.
+
+## Student
+
+The `Student` class represents a student with attributes such as name, PRN, and marks for three subjects.
+
+### Constructor
+
+- `public Student(String name, int prn, double mark1, double mark2, double mark3)`: This constructor initializes a `Student` object with the provided name, PRN, and marks for three subjects.
+
+### Attributes
+
+- `String name`: Represents the name of the student.
+- `int prn`: Represents the PRN (Permanent Registration Number) of the student.
+- `double mark1, mark2, mark3`: Represent the marks obtained by the student in three subjects.
+
+## Main
+
+The `Main` class contains the main method and serves as the entry point for the program.
+
+### Main Method
+
+- `public static void main(String[] args)`: This method prompts the user to input details such as student name, PRN, and marks for three subjects. It then creates a `Result` object with the provided details and displays the exam details using the `displayExamDetails` method.
+
+
 
 ## Additional Notes
 
